@@ -139,13 +139,14 @@ body {
    Hero Section
    ============================================ */
 .hero {
-    min-height: 100vh;
+    min-height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    padding-bottom: var(--spacing-lg);
 }
 
 .hero-background {
@@ -290,10 +291,7 @@ body {
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
 }
 
 .scroll-indicator span {
