@@ -10,7 +10,32 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initSmoothScrolling();
     initNavbarScroll();
+    initMobileMenu();
 });
+
+/**
+ * Mobile hamburger menu toggle
+ */
+function initMobileMenu() {
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.getElementById('nav-links');
+    if (!hamburger || !navLinks) return;
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a link is tapped
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
 
 /**
  * Animate elements when they enter the viewport
