@@ -8,9 +8,19 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=JetBrains+Mono:wght@400;500&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <style>
+    @font-face {
+      font-family: 'Soria';
+      src: url('../fonts/soria.woff2') format('woff2'),
+           url('../fonts/soria.woff') format('woff'),
+           url('../fonts/Soria-Bold.otf') format('opentype');
+      font-weight: 400 800;
+      font-style: normal;
+      font-display: swap;
+    }
+
     :root {
       --clr-bg-deep: #0a0c10;
       --clr-bg-surface: #12151c;
@@ -28,6 +38,8 @@
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-display: 'Playfair Display', Georgia, serif;
       --font-mono: 'JetBrains Mono', monospace;
+      --font-brand: 'Soria', serif;
+      --font-nav: 'Neuton', serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -63,17 +75,28 @@
     }
     nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
     .nav-brand {
-      font-size: 1.5rem; font-weight: 700;
+      font-family: var(--font-brand);
+      font-size: 1.85rem;
+      font-weight: 700;
       background: var(--grad-hero);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; text-decoration: none;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      line-height: 1;
     }
-    .nav-links { list-style: none; display: flex; gap: 1.8rem; }
+    .nav-links { list-style: none; display: flex; gap: 1.8rem; align-items: center; }
     .nav-links a {
-      color: var(--clr-text-secondary); text-decoration: none;
-      font-size: 0.85rem; font-weight: 500;
-      letter-spacing: 0.04em; text-transform: uppercase;
-      transition: color 0.25s ease; position: relative;
+      font-family: var(--font-nav);
+      color: var(--clr-text-secondary);
+      text-decoration: none;
+      font-size: 1.12rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+      position: relative;
     }
     .nav-links a::after {
       content: ''; position: absolute;
@@ -83,6 +106,7 @@
       transition: width 0.3s ease;
     }
     .nav-links a:hover { color: var(--clr-accent-primary); }
+
     .nav-links a:hover::after { width: 100%; }
     .nav-links .active-link { color: var(--clr-accent-primary); font-weight: 700; }
     .nav-links .active-link::after { width: 100%; }
@@ -115,7 +139,7 @@
         box-shadow: 0 8px 30px rgba(0,0,0,0.4);
       }
       .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1rem; padding: 0.6rem 0; border-bottom: 1px solid var(--clr-border); }
+      .nav-links a { font-family: var(--font-nav); font-size: 1.15rem; padding: 0.6rem 0; border-bottom: 1px solid var(--clr-border); }
       .nav-links li:last-child a { border-bottom: none; }
     }
 
