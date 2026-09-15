@@ -106,19 +106,10 @@ function initSmoothScrolling() {
  */
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
+    if (!navbar) return;
     
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        // Add shadow when scrolled
-        if (currentScroll > 50) {
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-        
-        lastScroll = currentScroll;
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
 }
 
