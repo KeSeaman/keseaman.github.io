@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Building a Culturally Grounded Dataset for AI Mental Health Intervention in East Africa — by Kinyua Seaman.">
+  <meta name="description" content="Building a Culturally Grounded Dataset for AI Mental Health Intervention in East Africa | by Kinyua Seaman.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
@@ -568,7 +568,7 @@
 <!-- Reading Progress Bar -->
 <div id="progress-bar"></div>
 
-<!-- Navigation — links back to portfolio -->
+<!-- Navigation: links back to portfolio -->
 <nav id="main-nav">
   <a href="../index.html" class="nav-brand">KS</a>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -599,7 +599,7 @@
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <header class="hero">
   <div class="hero-content">
-    <span class="hero-tag"><span class="dot"></span> MSc in Artificial Intelligence — JKUAT</span>
+    <span class="hero-tag"><span class="dot"></span> MSc in Artificial Intelligence, JKUAT</span>
     <h1>Building a <span class="gradient-text">Culturally Grounded Dataset</span> for AI Mental Health Intervention</h1>
     <p class="hero-subtitle">
       How we are documenting East African idioms of distress, communal coping strategies, and culturally resonant metaphors to teach an AI system to truly understand loneliness in Kenya.
@@ -630,8 +630,8 @@
 
   <!-- Introduction -->
   <section class="blog-section" id="introduction">
-    <p>When I began my Master's research at Jomo Kenyatta University of Agriculture and Technology, I carried a question that had followed me for years: <strong>Why does every mental health chatbot I have ever tried feel like it was designed for someone else?</strong> Someone in San Francisco, perhaps, or London — but certainly not someone in Nairobi.</p>
-    <p>That dissonance is not an interface bug. It is a dataset problem. The models powering these tools were trained on overwhelmingly Western, English-language, and individualistic data. When a user in Kibera describes <em>kufikiria sana</em> — "thinking too much" — the model reads anxiety. It does not see what the phrase actually encodes: a fracture in communal belonging, a signal that relationships have broken down. The therapeutic response it generates, therefore, is clinically plausible but culturally deaf.</p>
+    <p>When I began my Master's research at Jomo Kenyatta University of Agriculture and Technology, I carried a question that had followed me for years: <strong>Why does every mental health chatbot I have ever tried feel like it was designed for someone else?</strong> Someone in San Francisco, perhaps, or London, but certainly not someone in Nairobi.</p>
+    <p>That dissonance is not an interface bug. It is a dataset problem. The models powering these tools were trained on overwhelmingly Western, English-language, and individualistic data. When a user in Kibera describes <em>kufikiria sana</em> ("thinking too much"), the model reads anxiety. It does not see what the phrase actually encodes: a fracture in communal belonging, a signal that relationships have broken down. The therapeutic response it generates, therefore, is clinically plausible but culturally deaf.</p>
     <p>This blog is my ongoing account of building the dataset that will change that. It documents the cultural knowledge base at the heart of my research project: <strong>A Causal Evaluation of Culturally Adaptive AI as Relational Scaffolding for Loneliness Intervention.</strong></p>
   </section>
 
@@ -656,16 +656,16 @@
         <div class="stat-label">Kenyan youth reached by Shamiri Institute</div>
       </div>
     </div>
-    <p>Systematic reviews of conversational agents for mental health have found widespread reliance on Western-developed scales, minimal cultural adaptation, and weak links between automated performance metrics and actual user well-being. When researchers at Aalto University studied AI companion usage longitudinally, they discovered a troubling paradox: the AI provided unconditional support that attracted lonely individuals, but extended use eroded well-being and impaired the capacity to navigate real-world relationships. The problem is not that AI cannot help — it is that <strong>the wrong data produces the wrong kind of help.</strong></p>
+    <p>Systematic reviews of conversational agents for mental health have found widespread reliance on Western-developed scales, minimal cultural adaptation, and weak links between automated performance metrics and actual user well-being. When researchers at Aalto University studied AI companion usage longitudinally, they discovered a troubling paradox: the AI provided unconditional support that attracted lonely individuals, but extended use eroded well-being and impaired the capacity to navigate real-world relationships. The problem is not that AI cannot help; it is that <strong>the wrong data produces the wrong kind of help.</strong></p>
     <div class="callout gold">
       <div class="callout-title">💡 Key Insight</div>
-      <p>Datasets do not just train models — they encode worldviews. A dataset built exclusively from Western clinical literature embeds a Western worldview into every generated response. Creating culturally grounded datasets is therefore not a nicety; it is an ethical imperative for any AI system that will touch human lives in non-Western contexts.</p>
+      <p>Datasets do not just train models; they encode worldviews. A dataset built exclusively from Western clinical literature embeds a Western worldview into every generated response. Creating culturally grounded datasets is therefore not a nicety; it is an ethical imperative for any AI system that will touch human lives in non-Western contexts.</p>
     </div>
     <p>Three properties make a mental health dataset genuinely useful in our context:</p>
     <ol>
-      <li><strong>Cultural validity</strong> — it must capture how distress is actually expressed in the target community, not how Western textbooks say it should be expressed.</li>
-      <li><strong>Relational orientation</strong> — it must encode the communal, rather than purely individual, nature of emotional suffering.</li>
-      <li><strong>Therapeutic grounding</strong> — it must connect cultural expressions to evidence-based interventions, not just translate words.</li>
+      <li><strong>Cultural validity:</strong> It must capture how distress is actually expressed in the target community, not how Western textbooks say it should be expressed.</li>
+      <li><strong>Relational orientation:</strong> It must encode the communal, rather than purely individual, nature of emotional suffering.</li>
+      <li><strong>Therapeutic grounding:</strong> It must connect cultural expressions to evidence-based interventions, not just translate words.</li>
     </ol>
     <p>These are the principles driving every decision in our dataset construction.</p>
   </section>
@@ -676,20 +676,20 @@
   <section class="blog-section" id="our-dataset">
     <span class="section-label teal"><span class="section-number">02</span> The Dataset</span>
     <h2>What We Are Building: A Dual-Track Cultural Knowledge Base</h2>
-    <p>Our research system uses a Retrieval-Augmented Generation (RAG) architecture — meaning the AI does not rely solely on its pre-trained weights to generate responses. Instead, it actively retrieves relevant knowledge from curated repositories before formulating each reply. The quality of those repositories is the entire game.</p>
+    <p>Our research system uses a Retrieval-Augmented Generation (RAG) architecture, meaning the AI does not rely solely on its pre-trained weights to generate responses. Instead, it actively retrieves relevant knowledge from curated repositories before formulating each reply. The quality of those repositories is the entire game.</p>
     <p>We are constructing <strong>two parallel knowledge tracks</strong>:</p>
     <div class="pipeline">
       <div class="pipeline-step">
         <div class="pipeline-connector"><div class="pipeline-dot"></div><div class="pipeline-line"></div></div>
         <div class="pipeline-body">
-          <h4>Track A — Clinical Grounding Repository</h4>
+          <h4>Track A: Clinical Grounding Repository</h4>
           <p>A curated collection of Cognitive Behavioural Therapy (CBT) protocols, behavioural activation strategies, and psycho-educational materials validated specifically for adolescent populations. This includes cognitive restructuring frameworks, activity scheduling templates, and graduated exposure hierarchies.</p>
         </div>
       </div>
       <div class="pipeline-step">
         <div class="pipeline-connector"><div class="pipeline-dot"></div><div class="pipeline-line"></div></div>
         <div class="pipeline-body">
-          <h4>Track B — Cultural Translation Repository</h4>
+          <h4>Track B: Cultural Translation Repository</h4>
           <p>The heart of our unique contribution. This knowledge base contains East African idioms of distress, culturally resonant metaphors, communal coping strategies, and validated cultural responses. It draws from published ethnographic research, clinical expertise from local mental health practitioners, and community-based participatory design.</p>
         </div>
       </div>
@@ -697,7 +697,7 @@
         <div class="pipeline-connector"><div class="pipeline-dot"></div><div class="pipeline-line"></div></div>
         <div class="pipeline-body">
           <h4>Fusion & Contextualisation Module</h4>
-          <p>Both tracks feed into a fusion module that combines clinical strategy with cultural framing into a unified prompt context. The system does not simply translate English therapy into Swahili — it reformulates the therapeutic intent through culturally resonant metaphors and communal language registers.</p>
+          <p>Both tracks feed into a fusion module that combines clinical strategy with cultural framing into a unified prompt context. The system does not simply translate English therapy into Swahili; it reformulates the therapeutic intent through culturally resonant metaphors and communal language registers.</p>
         </div>
       </div>
       <div class="pipeline-step">
@@ -713,18 +713,18 @@
     <div class="idiom-grid">
       <div class="idiom-card">
         <div class="idiom-word">Kufikiria sana</div>
-        <p class="idiom-meaning">"Thinking too much" — signals communal disruption and relational anxiety, not merely clinical worry.</p>
+        <p class="idiom-meaning">"Thinking too much": signals communal disruption and relational anxiety, not merely clinical worry.</p>
       </div>
       <div class="idiom-card">
         <div class="idiom-word">Kufa moyo</div>
-        <p class="idiom-meaning">"Death of the heart" — deep hopelessness and loss of will, tied to social disconnection.</p>
+        <p class="idiom-meaning">"Death of the heart": deep hopelessness and loss of will, tied to social disconnection.</p>
       </div>
       <div class="idiom-card">
         <div class="idiom-word">Ipo siku</div>
-        <p class="idiom-meaning">"There will come a day" — a communal coping mechanism expressing resilience through future-oriented hope.</p>
+        <p class="idiom-meaning">"There will come a day": a communal coping mechanism expressing resilience through future-oriented hope.</p>
       </div>
     </div>
-    <p>Each entry in our cultural knowledge base includes the idiom itself, its communal context, situations where it is typically used, how it maps to Western diagnostic categories (and where the mapping breaks down), and culturally appropriate therapeutic responses. We also document colloquial terms like <em>"Njaanuary"</em> — the January financial squeeze that many Kenyans experience — because economic hardship is deeply intertwined with loneliness and mental distress in our context.</p>
+    <p>Each entry in our cultural knowledge base includes the idiom itself, its communal context, situations where it is typically used, how it maps to Western diagnostic categories (and where the mapping breaks down), and culturally appropriate therapeutic responses. We also document colloquial terms like <em>"Njaanuary"</em> (the January financial squeeze that many Kenyans experience), because economic hardship is deeply intertwined with loneliness and mental distress in our context.</p>
   </section>
 
   <div class="section-divider"></div>
@@ -735,14 +735,14 @@
     <h2>Data Collection Approaches</h2>
     <p>Building a cultural knowledge base is fundamentally different from scraping Reddit threads or downloading PubMed abstracts. The data we need lives in communities, in lived experience, in the spaces between languages. Our collection strategy uses four complementary approaches:</p>
     <h3>1. Published Ethnographic Literature</h3>
-    <p>Our foundational layer draws from peer-reviewed ethnographic research on East African idioms of distress. Mendenhall and colleagues' analysis of 100 life-history narrative interviews at a public hospital in Nairobi provides rich documentation of how <em>kufikiria sana</em> functions as both a standalone expression and a marker of deeper psychological distress — an ethnopsychology that integrates traditional and biomedical frameworks.</p>
+    <p>Our foundational layer draws from peer-reviewed ethnographic research on East African idioms of distress. Mendenhall and colleagues' analysis of 100 life-history narrative interviews at a public hospital in Nairobi provides rich documentation of how <em>kufikiria sana</em> functions as both a standalone expression and a marker of deeper psychological distress: an ethnopsychology that integrates traditional and biomedical frameworks.</p>
     <p>We also incorporate network analysis research on Kenyan adolescents, which identifies loneliness as the most central psychological variable bridging depressive symptoms and diminished well-being, with gender-contingent pathways: family support proves more central for girls, while peer support plays a larger role for boys.</p>
     <h3>2. Clinical Expert Elicitation</h3>
-    <p>Published literature provides the scaffolding, but the living knowledge lives with practitioners. We conduct structured interviews and iterative review sessions with local mental health professionals — clinical psychologists, counsellors, and community health workers — who encounter these idioms daily. They help us validate that our documented responses are not just academically correct but practically resonant.</p>
+    <p>Published literature provides the scaffolding, but the living knowledge lives with practitioners. We conduct structured interviews and iterative review sessions with local mental health professionals (clinical psychologists, counsellors, and community health workers) who encounter these idioms daily. They help us validate that our documented responses are not just academically correct but practically resonant.</p>
     <h3>3. Community-Based Participatory Design</h3>
-    <p>Perhaps the most important data stream. We run participatory design workshops with youth representatives and community stakeholders. These sessions surface idioms and metaphors that do not appear in any published paper — the expressions people actually use in WhatsApp groups, in matatu conversations, in church youth meetings. This is where <em>"Njaanuary"</em> emerged as a data point. No ethnography textbook mentions it, but every Kenyan youth recognises it instantly.</p>
+    <p>Perhaps the most important data stream. We run participatory design workshops with youth representatives and community stakeholders. These sessions surface idioms and metaphors that do not appear in any published paper: the expressions people actually use in WhatsApp groups, in matatu conversations, in church youth meetings. This is where <em>"Njaanuary"</em> emerged as a data point. No ethnography textbook mentions it, but every Kenyan youth recognises it instantly.</p>
     <h3>4. Existing AI-Adapted Frameworks</h3>
-    <p>We study and incorporate lessons from successful cultural adaptation projects elsewhere. Xie's doctoral work on dynamic cultural adaptation for Chinese American caregivers provides methodological templates. The Shamiri Institute's school-based intervention model — which has reached over 185,000 young people in Kenya — offers validated community engagement patterns. The Ubuntu-guided LLM framework for CBT demonstrates how an African philosophical concept can be operationalised as an AI system directive.</p>
+    <p>We study and incorporate lessons from successful cultural adaptation projects elsewhere. Xie's doctoral work on dynamic cultural adaptation for Chinese American caregivers provides methodological templates. The Shamiri Institute's school-based intervention model (which has reached over 185,000 young people in Kenya) offers validated community engagement patterns. The Ubuntu-guided LLM framework for CBT demonstrates how an African philosophical concept can be operationalised as an AI system directive.</p>
     <div class="callout teal">
       <div class="callout-title">🔬 Methodological Note</div>
       <p>Our data is not "big data" in the Silicon Valley sense. It is <strong>deep data</strong>: carefully curated, contextually rich, and community-validated. A single well-documented idiom of distress, with its full relational context, is worth more than a million scraped social media posts for our purposes.</p>
@@ -755,20 +755,20 @@
   <section class="blog-section" id="challenges">
     <span class="section-label red"><span class="section-number">04</span> Obstacles</span>
     <h2>Challenges Encountered</h2>
-    <p>I would be dishonest if I presented this work as smooth or straightforward. Building a cultural dataset for mental health AI is full of tensions that have no clean solutions — only careful navigation.</p>
+    <p>I would be dishonest if I presented this work as smooth or straightforward. Building a cultural dataset for mental health AI is full of tensions that have no clean solutions, only careful navigation.</p>
     <h3>The Translation Problem Is Not a Translation Problem</h3>
-    <p>The most persistent challenge is that cultural adaptation is <strong>not translation</strong>. You cannot take a CBT thought record, translate it into Swahili, and call it "culturally adapted." When we write about <em>kufikiria sana</em>, we are not documenting the Swahili word for "anxiety." We are documenting an entirely different conceptual structure — one where individual suffering and communal disruption are the same thing. Standard NLP approaches to multilingual datasets completely miss this distinction.</p>
+    <p>The most persistent challenge is that cultural adaptation is <strong>not translation</strong>. You cannot take a CBT thought record, translate it into Swahili, and call it "culturally adapted." When we write about <em>kufikiria sana</em>, we are not documenting the Swahili word for "anxiety." We are documenting an entirely different conceptual structure, one where individual suffering and communal disruption are the same thing. Standard NLP approaches to multilingual datasets completely miss this distinction.</p>
     <h3>The Codification Paradox</h3>
-    <p>Turning living cultural knowledge into structured data entries inevitably reduces its richness. An idiom that means different things in different neighbourhoods, to different age groups, between men and women — how do you encode that variability without either oversimplifying or creating a database so complex it becomes unusable? We are still iterating on our schema for this.</p>
+    <p>Turning living cultural knowledge into structured data entries inevitably reduces its richness. An idiom that means different things in different neighbourhoods, to different age groups, between men and women: how do you encode that variability without either oversimplifying or creating a database so complex it becomes unusable? We are still iterating on our schema for this.</p>
     <h3>Navigating Clinical vs. Cultural Authority</h3>
-    <p>There is an inherent tension between clinical evidence and cultural knowledge. CBT has a strong evidence base, but it was developed within a Western epistemological framework. Some culturally appropriate coping strategies — such as seeking guidance from community elders or framing distress through spiritual language — do not map neatly onto CBT frameworks. Our dataset must honour both without subordinating one to the other.</p>
+    <p>There is an inherent tension between clinical evidence and cultural knowledge. CBT has a strong evidence base, but it was developed within a Western epistemological framework. Some culturally appropriate coping strategies (such as seeking guidance from community elders or framing distress through spiritual language) do not map neatly onto CBT frameworks. Our dataset must honour both without subordinating one to the other.</p>
     <h3>The Safety Boundary</h3>
     <p>Mental health data carries unique risks. Every data point we collect represents someone's pain. Our safety systems must detect severe distress and immediately bypass the AI's generative engine, routing users to human professionals. But <strong>what counts as "severe distress" is itself culturally variable</strong>. Western severity thresholds may trigger unnecessary escalations (causing users to distrust the system) or miss culturally-coded crisis signals. Calibrating these thresholds is ongoing work.</p>
     <h3>Resource and Infrastructure Constraints</h3>
     <p>Practically, we face the challenges common to African AI research: intermittent internet connectivity during remote fieldwork, limited access to GPU infrastructure for iterative model testing, and the sheer time cost of community-based participatory methods compared to automated data collection. Each participatory design workshop takes weeks to organise and generates data that requires hours of manual curation.</p>
     <blockquote>
-      <p>The hardest part of building this dataset is not technical. It is the constant negotiation between rigour and respect — between what the model needs to learn and what the community is comfortable teaching it.</p>
-      <cite>— Personal research journal, April 2026</cite>
+      <p>The hardest part of building this dataset is not technical. It is the constant negotiation between rigour and respect: between what the model needs to learn and what the community is comfortable teaching it.</p>
+      <cite>Personal research journal, April 2026</cite>
     </blockquote>
   </section>
 
@@ -778,7 +778,7 @@
   <section class="blog-section" id="community">
     <span class="section-label teal"><span class="section-number">05</span> People</span>
     <h2>Community Engagement and Stakeholder Involvement</h2>
-    <p>If I have learned one thing so far, it is this: <strong>you cannot build a culturally adaptive AI from a lab.</strong> The entire premise of this research is that Western-trained models fail because they were built without the communities they claim to serve. We refuse to replicate that mistake — which is why our community engagement strategy is central to every phase of what comes next.</p>
+    <p>If I have learned one thing so far, it is this: <strong>you cannot build a culturally adaptive AI from a lab.</strong> The entire premise of this research is that Western-trained models fail because they were built without the communities they claim to serve. We refuse to replicate that mistake, which is why our community engagement strategy is central to every phase of what comes next.</p>
     <h3>Who We Plan to Engage</h3>
     <p>As the project moves from literature review into active data collection and system validation, we intend to build relationships with a broad set of stakeholders:</p>
     <ul class="tag-list">
@@ -790,18 +790,18 @@
       <li class="violet">Church Youth Leaders</li>
       <li class="gold">Mental Health NGOs</li>
     </ul>
-    <p>No formal partnerships have been established yet — this remains a planned engagement framework. But the categories are deliberate: we need clinical authority (psychologists), cultural authority (elders, faith leaders), and lived experience (youth themselves) to create a dataset that is both therapeutically sound and culturally genuine.</p>
+    <p>No formal partnerships have been established yet; this remains a planned engagement framework. But the categories are deliberate: we need clinical authority (psychologists), cultural authority (elders, faith leaders), and lived experience (youth themselves) to create a dataset that is both therapeutically sound and culturally genuine.</p>
     <h3>Planned Participatory Design Workshops</h3>
     <p>Our primary engagement mechanism will be participatory design workshops. Rather than surveying communities from a distance, we plan to design <em>with</em> them. Workshop participants will review our documented idioms for accuracy, suggest missing expressions, critique the AI's draft responses, and help define the boundary between helpful and intrusive. Their feedback will directly modify the dataset.</p>
-    <p>These workshops are still in the planning stage. We are currently developing facilitation protocols and identifying community entry points — the gatekeepers and trusted leaders who can help us access the right populations respectfully and ethically.</p>
+    <p>These workshops are still in the planning stage. We are currently developing facilitation protocols and identifying community entry points: the gatekeepers and trusted leaders who can help us access the right populations respectfully and ethically.</p>
     <h3>Learning from Existing Infrastructure</h3>
-    <p>We are studying organisations that have already built trust with Kenyan communities in the mental health space. The <strong>Shamiri Institute</strong>, for example, has reached over 185,000 young people through school-based interventions delivered by trained peer providers. Their model — low-cost, peer-delivered, and culturally embedded — represents exactly the kind of infrastructure we hope to complement. If future collaborations materialise, our AI layer could extend the reach of such programmes beyond school hours, while always directing users back to human community resources.</p>
-    <p>Other organisations doing valuable work in this space — university counselling centres, community health volunteer networks, and faith-based youth programmes — are all potential partners we aim to approach as the project progresses.</p>
+    <p>We are studying organisations that have already built trust with Kenyan communities in the mental health space. The <strong>Shamiri Institute</strong>, for example, has reached over 185,000 young people through school-based interventions delivered by trained peer providers. Their model (low-cost, peer-delivered, and culturally embedded) represents exactly the kind of infrastructure we hope to complement. If future collaborations materialise, our AI layer could extend the reach of such programmes beyond school hours, while always directing users back to human community resources.</p>
+    <p>Other organisations doing valuable work in this space (university counselling centres, community health volunteer networks, and faith-based youth programmes) are all potential partners we aim to approach as the project progresses.</p>
     <h3>The Relational Scaffolding Philosophy</h3>
-    <p>Our system is designed as <strong>relational scaffolding</strong>, not a replacement companion. Every generated response is constrained by a system-level directive: it must end with an action that promotes real-world community engagement. This is not a feature — it is the entire design philosophy. The AI explicitly tells users it is temporary. It acknowledges its limitations. It pushes people toward their actual communities, not toward more screen time.</p>
+    <p>Our system is designed as <strong>relational scaffolding</strong>, not a replacement companion. Every generated response is constrained by a system-level directive: it must end with an action that promotes real-world community engagement. This is not a feature; it is the entire design philosophy. The AI explicitly tells users it is temporary. It acknowledges its limitations. It pushes people toward their actual communities, not toward more screen time.</p>
     <div class="callout violet">
       <div class="callout-title">🤝 Community-Centred Design</div>
-      <p>We will measure success not by engagement metrics (how long users spend with the AI) but by <strong>re-engagement metrics</strong>: how effectively users return to their physical communities. Our dataset will encode this philosophy at every level — from the coping strategies it documents to the conversational patterns it recommends.</p>
+      <p>We will measure success not by engagement metrics (how long users spend with the AI) but by <strong>re-engagement metrics</strong>: how effectively users return to their physical communities. Our dataset will encode this philosophy at every level, from the coping strategies it documents to the conversational patterns it recommends.</p>
     </div>
   </section>
 
@@ -813,21 +813,21 @@
     <h2>Ethical Considerations During Dataset Creation</h2>
     <p>Building a dataset that touches mental health, cultural identity, and vulnerable youth populations is an exercise in ethical complexity. Every design decision is simultaneously a moral decision.</p>
     <h3>Informed Consent and Institutional Oversight</h3>
-    <p>Our research complies with JKUAT ethical review guidelines and NACOSTI (National Commission for Science, Technology and Innovation) regulations. All participants — and guardians for participants under 18 — provide written informed consent following full disclosure of the research purpose, procedures, risks, and benefits. No one is asked to share more than they are comfortable with.</p>
+    <p>Our research complies with JKUAT ethical review guidelines and NACOSTI (National Commission for Science, Technology and Innovation) regulations. All participants (and guardians for participants under 18) provide written informed consent following full disclosure of the research purpose, procedures, risks, and benefits. No one is asked to share more than they are comfortable with.</p>
     <h3>Data Privacy and De-identification</h3>
-    <p>All interactions will be de-identified, encrypted, and stored on secure servers compliant with Kenyan data protection laws. The cultural knowledge base itself contains generalised idioms and communal expressions — not individual stories. We are building a cultural knowledge system, not a database of personal disclosures.</p>
+    <p>All interactions will be de-identified, encrypted, and stored on secure servers compliant with Kenyan data protection laws. The cultural knowledge base itself contains generalised idioms and communal expressions, not individual stories. We are building a cultural knowledge system, not a database of personal disclosures.</p>
     <h3>The "Do No Harm" Imperative</h3>
     <p>In mental health AI, doing no harm requires more than passive compliance. It demands active safety systems. Our architecture includes:</p>
     <ul>
       <li><strong>Azure AI Content Safety</strong> filtering on every input for toxicity, self-harm, and hate speech.</li>
-      <li><strong>Automatic clinical escalation</strong> — if the system detects severe distress, it immediately bypasses the generative engine and routes the user to human mental health professionals and crisis helplines.</li>
-      <li><strong>Licensed clinical oversight</strong> — a clinical psychologist monitors safety throughout the study.</li>
-      <li><strong>No denial of access</strong> — no participant is denied access to alternative mental health services at any point.</li>
+      <li><strong>Automatic clinical escalation:</strong> If the system detects severe distress, it immediately bypasses the generative engine and routes the user to human mental health professionals and crisis helplines.</li>
+      <li><strong>Licensed clinical oversight:</strong> A clinical psychologist monitors safety throughout the study.</li>
+      <li><strong>No denial of access:</strong> No participant is denied access to alternative mental health services at any point.</li>
     </ul>
     <h3>Avoiding Extractive Research</h3>
     <p>A critical ethical concern in African AI research is the extractive pattern: Western researchers (or Western-trained models) extract cultural knowledge, publish papers, and move on, leaving communities no better off. We are committed to avoiding this. Our dataset, codebase, and knowledge base will be released under an open-source licence upon completion. The communities that helped build this resource will benefit from it.</p>
     <h3>The Dependency Question</h3>
-    <p>Perhaps the most subtle ethical consideration: <strong>is it ethical to build an AI tool that could itself create dependency?</strong> Research has shown that AI companions can paradoxically deepen isolation. Our design addresses this head-on by encoding the relational scaffolding philosophy into the dataset itself. The AI is explicitly constrained to be temporary. But we remain vigilant — our evaluation framework (using structural causal models and the UCLA Loneliness Scale measured at three time points) will tell us whether we are succeeding or inadvertently causing harm.</p>
+    <p>Perhaps the most subtle ethical consideration: <strong>is it ethical to build an AI tool that could itself create dependency?</strong> Research has shown that AI companions can paradoxically deepen isolation. Our design addresses this head-on by encoding the relational scaffolding philosophy into the dataset itself. The AI is explicitly constrained to be temporary. But we remain vigilant: our evaluation framework (using structural causal models and the UCLA Loneliness Scale measured at three time points) will tell us whether we are succeeding or inadvertently causing harm.</p>
     <div class="callout red">
       <div class="callout-title">⚠️ An Honest Admission</div>
       <p>We do not have all the ethical answers. What we have is a commitment to asking the questions rigorously, listening to community feedback, and designing systems that prioritise human agency over algorithmic engagement. If our evaluation reveals that the intervention causes harm, we will say so publicly. That is the minimum standard for responsible AI research.</p>
@@ -839,12 +839,12 @@
   <!-- Conclusion -->
   <section class="blog-section" id="conclusion">
     <h2>Looking Forward</h2>
-    <p>This dataset is not finished. It may never be "finished" in the way a static benchmark is finished. It is a living document of how a community expresses suffering, finds resilience, and makes meaning from hardship. As our understanding deepens — through more participatory workshops, more clinical expert reviews, more iterations of the AI system — the dataset will grow and evolve.</p>
-    <p>What I am most excited about is the evaluation ahead. We are preparing a randomised controlled trial with at least 200 Kenyan youth participants, comparing our culturally adaptive system against a generic baseline. For the first time, we will be able to isolate whether algorithmic cultural adaptation <em>causally</em> reduces loneliness, not just whether it correlates with engagement. If the answer is yes, we will have demonstrated something the field has theorised but never proven: that deep cultural adaptation in AI is not a luxury — it is a clinical necessity.</p>
-    <p>If the answer is no, that finding will be equally valuable. Either way, the dataset we are building — this careful documentation of how East African communities experience, express, and cope with loneliness — will remain a resource for future researchers who believe, as I do, that AI should serve all of humanity, not just the cultures that built it.</p>
+    <p>This dataset is not finished. It may never be "finished" in the way a static benchmark is finished. It is a living document of how a community expresses suffering, finds resilience, and makes meaning from hardship. As our understanding deepens (through more participatory workshops, more clinical expert reviews, and more iterations of the AI system), the dataset will grow and evolve.</p>
+    <p>What I am most excited about is the evaluation ahead. We are preparing a randomised controlled trial with at least 200 Kenyan youth participants, comparing our culturally adaptive system against a generic baseline. For the first time, we will be able to isolate whether algorithmic cultural adaptation <em>causally</em> reduces loneliness, not just whether it correlates with engagement. If the answer is yes, we will have demonstrated something the field has theorised but never proven: that deep cultural adaptation in AI is not a luxury; it is a clinical necessity.</p>
+    <p>If the answer is no, that finding will be equally valuable. Either way, the dataset we are building (this careful documentation of how East African communities experience, express, and cope with loneliness) will remain a resource for future researchers who believe, as I do, that AI should serve all of humanity, not just the cultures that built it.</p>
     <blockquote>
-      <p>The goal is not to build an AI that understands loneliness. The goal is to build an AI that understands loneliness <em>the way Kenyans understand loneliness</em> — and then helps them find their way back to each other.</p>
-      <cite>— Kinyua Seaman, June 2026</cite>
+      <p>The goal is not to build an AI that understands loneliness. The goal is to build an AI that understands loneliness <em>the way Kenyans understand loneliness</em>, and then helps them find their way back to each other.</p>
+      <cite>Kinyua Seaman, June 2026</cite>
     </blockquote>
     <ul class="tag-list" style="margin-top: 2.5rem;">
       <li class="gold">#CulturalAI</li>
@@ -865,7 +865,7 @@
   <a href="./" class="back-link">← Back to Blog</a>
   <a href="../index.html" class="back-link" style="margin-left: 1.5rem;">← Portfolio</a>
   <div class="footer-brand">Kinyua Seaman</div>
-  <p>MSc Artificial Intelligence — Jomo Kenyatta University of Agriculture and Technology</p>
+  <p>MSc Artificial Intelligence, Jomo Kenyatta University of Agriculture and Technology</p>
   <p>Supervised by Dr. Lawrence Nderu & Dr. Raphael Wanjiku</p>
   <p style="margin-top: 1rem; opacity: 0.5;">© 2026. Released under Creative Commons Attribution 4.0.</p>
 </footer>
