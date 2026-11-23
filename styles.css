@@ -1355,3 +1355,17 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+/* System lens line on project cards */
+.project-lens {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    border-left: 3px solid var(--color-accent-tertiary);
+    padding: 0.25rem 0 0.25rem 0.75rem;
+    margin: calc(-1 * var(--spacing-xs)) 0 var(--spacing-md);
+    line-height: 1.55;
+}
+
+.project-lens strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}

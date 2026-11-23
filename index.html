@@ -47,7 +47,7 @@
             </button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#act-iii">The Architect</a></li>
-                <li><a href="#act-ii">The Inquiry</a></li>
+                <li><a href="#act-ii">Policy &amp; Development</a></li>
                 <li><a href="#act-i">The Foundation</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="blog/">Blog</a></li>
@@ -66,8 +66,8 @@
         <div class="hero-content">
             <p class="hero-greeting">Hello, I'm</p>
             <h1 class="hero-name">Kinyua Seaman</h1>
-            <p class="hero-tagline">Data Scientist | ML Engineer</p>
-            <p class="hero-description">Engineering AI that Reasons, Not Just Predicts.</p>
+            <p class="hero-tagline">Causal AI that understands the system it changes, and the teams that build it.</p>
+            <p class="hero-description">Data Scientist at Safaricom · Telecoms Engineer · MSc AI researching explainable AI</p>
             <div class="hero-cta">
                 <a href="#act-iii" class="btn btn-primary">See The Evolution</a>
                 <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -101,26 +101,30 @@
                 <p class="act-subtitle">Engineering Causal Intelligence & Systems (Current Focus)</p>
             </div>
             <blockquote class="manifesto">
-                "True AI requires reasoning, not just pattern matching. I now build production-grade systems in Rust
-                that integrate Causal Inference with Machine Learning. My focus is on 'Safety Guardrails'—ensuring AI
-                is robust, explainable, and accountable in critical environments."
+                "Pattern matching is not enough when a model's output changes the system it measures. My current work
+                combines causal inference with machine learning, uses Rust where speed or safety matters, and treats
+                knowing when a model should not answer as part of the design."
             </blockquote>
             <div class="projects-grid">
                 <!-- Deep Causality -->
                 <article class="project-card flagship">
                     <div class="project-badge">Flagship</div>
                     <div class="project-icon">🔬</div>
-                    <h3 class="project-title">Deep Causality</h3>
+                    <h3 class="project-title">Deep Causality: ICU Sepsis</h3>
                     <div class="project-tech">
                         <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">Safety-Critical AI</span>
-                        <span class="tech-tag">Hyper-geometric</span>
-                        <span class="tech-tag">Deontic Guardrails</span>
+                        <span class="tech-tag">DeepCausality</span>
+                        <span class="tech-tag">Information Theory</span>
+                        <span class="tech-tag">Safety Guardrails</span>
                     </div>
-                    <p class="project-description">Architected a hyper-geometric causal reasoning engine in Rust to
-                        solve the "Black Box" reliability problem. Designed the Effect Ethos—a deterministic safety
-                        layer—to prevent AI hallucinations in life-critical ICU Sepsis detection, prioritizing clinical
-                        explainability over raw predictive metrics.</p>
+                    <p class="project-description">Causal driver analysis of ICU sepsis on the PhysioNet 2019
+                        challenge data, built in Rust on the DeepCausality library (causaloid graphs, mRMR feature
+                        selection, SURD information decomposition). Lactate, direct bilirubin and FiO₂ stand out as
+                        sepsis-specific drivers. A guardrail layer I wrote in Rust, modelled on DeepCausality's
+                        Effect Ethos idea, blocks predictions that fail clinical rules and explains why.</p>
+                    <p class="project-lens"><strong>System lens:</strong> the model refuses to predict when critical
+                        vitals (MAP, heart rate) are missing or more than half the record is empty, because a confident
+                        guess on missing data is worse than no answer.</p>
                     <a href="https://github.com/KeSeaman/Deep_Causality" class="project-link" target="_blank">
                         View on GitHub →
                     </a>
@@ -129,17 +133,21 @@
                 <!-- F1 MLOps -->
                 <article class="project-card">
                     <div class="project-icon">🏎️</div>
-                    <h3 class="project-title">F1 MLOps</h3>
+                    <h3 class="project-title">F1 Pit-Strategy RL</h3>
                     <div class="project-tech">
-                        <span class="tech-tag">Multi-Agent RL</span>
-                        <span class="tech-tag">Latency-Critical</span>
-                        <span class="tech-tag">Distributed Computing</span>
-                        <span class="tech-tag">Ray</span>
+                        <span class="tech-tag">Reinforcement Learning</span>
+                        <span class="tech-tag">PPO</span>
+                        <span class="tech-tag">Rust Simulator</span>
+                        <span class="tech-tag">PyO3</span>
                     </div>
-                    <p class="project-description">Engineered a latency-critical Multi-Agent Reinforcement Learning
-                        system for race strategy. Orchestrated a hybrid architecture: high-fidelity Rust simulations
-                        for physics and Ray RLlib for distributed agent training, optimizing pit-stop decisions under
-                        uncertainty.</p>
+                    <p class="project-description">A PPO agent chooses Hamilton's pit stops and tyre management for
+                        the 2021 Spanish GP, racing a Rust simulator (~330k laps/s) calibrated on the real race's lap
+                        data. Trained in about 15 seconds on a laptop CPU, it matches the best plan found by exhaustive
+                        search over one- and two-stop strategies (5363.4 s vs 5363.6 s) without being told how tyres
+                        work.</p>
+                    <p class="project-lens"><strong>System lens:</strong> replaying the real race, the simulator
+                        flatters Hamilton by about 9 seconds, and that bias flows straight into the strategy the agent
+                        learns. The README reports it rather than hiding it.</p>
                     <a href="https://github.com/KeSeaman/F1_MLOps" class="project-link" target="_blank">
                         View on GitHub →
                     </a>
@@ -148,18 +156,20 @@
                 <!-- Causal Inference Library -->
                 <article class="project-card">
                     <div class="project-icon">📊</div>
-                    <h3 class="project-title">Causal Inference Library</h3>
+                    <h3 class="project-title">Causal Rust Core</h3>
                     <div class="project-tech">
                         <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">Polars</span>
+                        <span class="tech-tag">PyO3</span>
                         <span class="tech-tag">Econometrics</span>
-                        <span class="tech-tag">SIMD</span>
+                        <span class="tech-tag">EconML</span>
                     </div>
-                    <p class="project-description">Re-implemented standard econometric estimators (IV/2SLS, Causal
-                        Forests) in Rust/Polars to eliminate Python bottlenecks. Achieved 10x performance gains over
-                        EconML, enabling causal discovery on high-dimensional datasets previously deemed
-                        computationally too expensive.</p>
-                    <a href="https://github.com/KeSeaman/Casual-Analytics" class="project-link" target="_blank">
+                    <p class="project-description">OLS, IV/2SLS and difference-in-differences implemented in Rust with
+                        Python bindings, set against EconML causal forests and mediation analysis on the NBER
+                        job-training data. Difference in means, OLS, inverse probability weighting and causal forests
+                        all put the earnings effect at about $800–890.</p>
+                    <p class="project-lens"><strong>System lens:</strong> estimators with different identifying
+                        assumptions agreeing is the robustness check; no single estimate is.</p>
+                    <a href="https://github.com/KeSeaman/Causal-Analytics" class="project-link" target="_blank">
                         View on GitHub →
                     </a>
                 </article>
@@ -171,14 +181,12 @@
     <section id="act-ii" class="act-section act-ii">
         <div class="container">
             <div class="act-header">
-                <h2 class="section-title">The Inquiry</h2>
-                <p class="act-subtitle">The Limits of Correlation (Research & Policy)</p>
+                <h2 class="section-title">Policy &amp; Development</h2>
+                <p class="act-subtitle">Evidence for public decisions, and where it stops</p>
             </div>
             <blockquote class="manifesto">
-                "Predictive accuracy isn't enough when the world changes. Driven by an insatiable curiosity, I began
-                questioning the 'Black Box' nature of standard models. I wasn't satisfied with knowing that a model
-                worked; I needed to know why. This pushed me to move from observing correlations to measuring impact
-                using Econometrics and Policy Analysis."
+                "Policy questions rarely come with clean experiments. This work measures impact from observational
+                data and development records, and is explicit about where the evidence runs out."
             </blockquote>
             <div class="projects-grid">
                 <!-- Climate Policy RAG -->
@@ -187,13 +195,18 @@
                     <h3 class="project-title">Climate Policy RAG</h3>
                     <div class="project-tech">
                         <span class="tech-tag">RAG</span>
-                        <span class="tech-tag">Vector Search</span>
-                        <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">Multi-Agent Systems</span>
+                        <span class="tech-tag">LLM Evaluation</span>
+                        <span class="tech-tag">Rust Vector Index</span>
+                        <span class="tech-tag">World Bank Data</span>
                     </div>
-                    <p class="project-description">Developed a Multi-Agent RAG system to navigate conflicted scientific
-                        literature (IPCC/UNFCCC). Utilized Rust-backed SIMD vector search and functional orchestration
-                        to synthesize policy insights, reducing "hallucination" risks in high-compliance domains.</p>
+                    <p class="project-description">A model grading its own answers rated every one fully faithful,
+                        including an answer claiming CO₂ has a global warming potential of 42 (it is 1 by definition).
+                        That finding came from the evaluation suite of this local-first RAG system, which answers
+                        questions over arXiv climate research and World Bank project abstracts, linking scientific
+                        evidence to what development projects fund. Plain vector search reaches about 0.9 recall@5 on
+                        a hand-labelled 40-question set.</p>
+                    <p class="project-lens"><strong>System lens:</strong> an evaluator that shares the generator's
+                        blind spots measures nothing. Faithfulness needs an independent, stronger judge.</p>
                     <a href="https://github.com/KeSeaman/ClimatePolicyRAG" class="project-link" target="_blank">
                         View on GitHub →
                     </a>
@@ -205,14 +218,17 @@
                     <h3 class="project-title">Marginal Utility of Police</h3>
                     <div class="project-tech">
                         <span class="tech-tag">Econometrics</span>
-                        <span class="tech-tag">Policy Analysis</span>
-                        <span class="tech-tag">Causal Inference</span>
+                        <span class="tech-tag">Public Policy</span>
                         <span class="tech-tag">DiD</span>
+                        <span class="tech-tag">Event Study</span>
                     </div>
-                    <p class="project-description">Conducted a rigorous Difference-in-Differences (DiD) study to isolate
-                        the causal impact of fiscal policy on crime rates. Applied advanced panel data techniques to
-                        control for omitted variable bias, providing unbiased evidence for public sector resource
-                        allocation.</p>
+                    <p class="project-description">Difference-in-differences and event-study analysis of police
+                        spending and violent crime across 2,624 US cities, 2015–2019. The two-period DiD finds no
+                        deterrent effect (+344 incidents per 100k in high-spending cities, p &lt; 0.10); the event study
+                        suggests a long-run reduction, weakened by a pre-existing trend in 2014.</p>
+                    <p class="project-lens"><strong>System lens:</strong> spending responds to crime as well as
+                        affecting it. With reverse causality, a high-spending city may simply be one where crime was
+                        already rising.</p>
                     <a href="https://github.com/KeSeaman/Marginal_Utility_Police_Force" class="project-link"
                         target="_blank">
                         View on GitHub →
@@ -240,14 +256,17 @@
                     <div class="project-icon">☁️</div>
                     <h3 class="project-title">Customer Churn Prediction</h3>
                     <div class="project-tech">
-                        <span class="tech-tag">MLOps</span>
                         <span class="tech-tag">AWS SageMaker</span>
                         <span class="tech-tag">XGBoost</span>
-                        <span class="tech-tag">Pipeline Architecture</span>
+                        <span class="tech-tag">S3</span>
+                        <span class="tech-tag">Course Project</span>
                     </div>
-                    <p class="project-description">Deployed a production-grade MLOps pipeline on AWS SageMaker.
-                        Integrated XGBoost with cloud-native infrastructure (S3/Lambda) to transform raw behavioral
-                        logs into real-time revenue retention signals, focusing on scalability and model monitoring.</p>
+                    <p class="project-description">A SageMaker training-and-deployment exercise from the AWS course
+                        <em>MLOps Engineering on AWS</em>: train, tune (12 jobs) and deploy an XGBoost churn model for a
+                        mobile operator, then set the decision threshold by the cost of missed churners against the cost
+                        of incentives.</p>
+                    <p class="project-lens"><strong>System lens:</strong> the right threshold depends on what a wrong
+                        prediction costs the business, not on accuracy.</p>
                     <a href="https://github.com/KeSeaman/Customer-Churn-Prediction-with-Sagemaker" class="project-link"
                         target="_blank">
                         View on GitHub →
@@ -261,12 +280,14 @@
                     <div class="project-tech">
                         <span class="tech-tag">Data Storytelling</span>
                         <span class="tech-tag">Statistical Analysis</span>
-                        <span class="tech-tag">EDA</span>
-                        <span class="tech-tag">Business Intelligence</span>
+                        <span class="tech-tag">Relative Risk</span>
+                        <span class="tech-tag">Clustering</span>
                     </div>
-                    <p class="project-description">Transformed raw law enforcement datasets into interactive Executive
-                        Decision Support systems. Built statistical visualizations that exposed systemic demographic
-                        disparities, turning static CSVs into actionable policy narratives.</p>
+                    <p class="project-description">Relative risk ratios on 2019 FBI arrest data measure which groups are
+                        over-represented in arrests relative to population, by offence; clustering (K-Medoids, GMM,
+                        hierarchical) then groups offences by demographic arrest profile.</p>
+                    <p class="project-lens"><strong>System lens:</strong> arrest data records policing as well as
+                        offending, so a disparity in arrests is not by itself a disparity in crime.</p>
                     <a href="https://github.com/KeSeaman/Arrest_Demographics_Disparity" class="project-link"
                         target="_blank">
                         View on GitHub →
@@ -283,9 +304,10 @@
                         <span class="tech-tag">KPI Tracking</span>
                         <span class="tech-tag">Data Storytelling</span>
                     </div>
-                    <p class="project-description">Interactive business intelligence dashboards showcasing data
-                        storytelling and analytics capabilities. Built executive dashboards with KPI tracking and
-                        metrics for data-driven storytelling.</p>
+                    <p class="project-description">An interactive Power BI HR attrition dashboard: who leaves, from which
+                        departments, roles and tenure bands, with KPI tracking for HR leadership.</p>
+                    <p class="project-lens"><strong>System lens:</strong> a dashboard shows who left, not why; the
+                        design question is which levers HR can actually change.</p>
                     <a href="https://github.com/KeSeaman/PowerBI_Visualization" class="project-link" target="_blank">
                         View on GitHub →
                     </a>
@@ -305,10 +327,9 @@
                     <h3 class="tile-title"><span class="tile-icon">⚡</span> Systems & Performance</h3>
                     <p class="tile-subtitle">High-performance computing and safety-critical implementation.</p>
                     <div class="skill-tags">
-                        <span class="skill-tag">Rust (Actix, Rayon, Tokio)</span>
+                        <span class="skill-tag">Rust (Rayon, Tokio, ndarray)</span>
                         <span class="skill-tag">PyO3 (Rust-Python Bindings)</span>
-                        <span class="skill-tag">WebAssembly (WASM)</span>
-                        <span class="skill-tag">SIMD Optimization</span>
+                        <span class="skill-tag">Calibrated Simulators</span>
                     </div>
                 </div>
 
@@ -317,8 +338,8 @@
                     <h3 class="tile-title"><span class="tile-icon">🧠</span> The Reasoning Layer</h3>
                     <p class="tile-subtitle">Moving beyond correlation to structural understanding.</p>
                     <div class="skill-tags">
-                        <span class="skill-tag">DeepCausality (Author)</span>
-                        <span class="skill-tag">EconML / CausalML</span>
+                        <span class="skill-tag">DeepCausality (mRMR, SURD, guardrails)</span>
+                        <span class="skill-tag">EconML</span>
                         <span class="skill-tag">Do-Calculus & DAGs</span>
                         <span class="skill-tag">Difference-in-Differences (DiD)</span>
                         <span class="skill-tag">Bayesian Networks</span>
@@ -332,7 +353,7 @@
                     <div class="skill-tags">
                         <span class="skill-tag">Python (Advanced)</span>
                         <span class="skill-tag">Polars / Pandas / Modin</span>
-                        <span class="skill-tag">PyTorch / Ray RLlib</span>
+                        <span class="skill-tag">PyTorch (PPO)</span>
                         <span class="skill-tag">Scikit-Learn</span>
                         <span class="skill-tag">PowerBI / Tableau</span>
                         <span class="skill-tag">Jupyter / Marimo Notebooks</span>
@@ -344,11 +365,11 @@
                     <h3 class="tile-title"><span class="tile-icon">🚀</span> The Infrastructure</h3>
                     <p class="tile-subtitle">Deploying robust models to production environments.</p>
                     <div class="skill-tags">
-                        <span class="skill-tag">AWS (SageMaker, Lambda, S3)</span>
-                        <span class="skill-tag">Docker / Kubernetes</span>
-                        <span class="skill-tag">MLOps Pipelines</span>
-                        <span class="skill-tag">Git / CI/CD</span>
-                        <span class="skill-tag">SQL / NoSQL</span>
+                        <span class="skill-tag">AWS (SageMaker, S3)</span>
+                        <span class="skill-tag">Docker / Podman</span>
+                        <span class="skill-tag">LLM &amp; Retrieval Evaluation</span>
+                        <span class="skill-tag">Git / GitHub Actions</span>
+                        <span class="skill-tag">SQL / Spark (Databricks)</span>
                     </div>
                 </div>
             </div>
@@ -461,7 +482,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Kinyua Seaman. Built with passion.</p>
+            <p>© 2026 Kinyua Seaman</p>
         </div>
     </footer>
 
