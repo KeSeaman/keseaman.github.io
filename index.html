@@ -167,9 +167,10 @@
                         Python bindings, set against EconML causal forests and mediation analysis on the NBER
                         job-training data. Difference in means, OLS, inverse probability weighting and causal forests
                         all put the earnings effect at about $800–890.</p>
-                    <p class="project-lens"><strong>System lens:</strong> measured before claiming. For these
-                        estimators the Rust path is 2–6× slower than numpy, because copying data costs more than the
-                        arithmetic saves; Rust would earn its place on bootstrap-style workloads numpy cannot vectorise.</p>
+                    <p class="project-lens"><strong>System lens:</strong> measured before claiming. For a single fit
+                        Rust is 2–6× slower than numpy, which hands the work to optimised BLAS. For a bootstrap, which
+                        numpy cannot do in one call, a parallel Rust kernel is 3–20× faster than the best vectorised
+                        numpy version: the right tool depends on the shape of the workload.</p>
                     <a href="https://github.com/KeSeaman/Causal-Analytics" class="project-link" target="_blank">
                         View on GitHub →
                     </a>
