@@ -119,11 +119,13 @@
                     </div>
                     <p class="project-description">Sepsis early warning on PhysioNet 2019, trained on one hospital
                         and tested on another. Causal discovery in Rust selects ten physiological drivers (DeepCausality's
-                        mRMR, plus a SURD decomposition I re-implemented after finding the library's version incorrect).
+                        mRMR, plus a SURD decomposition I re-implemented after reproducing the errors reported upstream in
+                        <a href="https://github.com/deepcausality-rs/deep_causality/issues/878" target="_blank">issue #878</a>).
                         A detector on those drivers reaches 0.70 hourly AUROC on the unseen hospital: above a SIRS/qSOFA
                         score (0.66), below using every feature (0.77).</p>
                     <p class="project-lens"><strong>System lens:</strong> guardrails that refuse to predict on sparse
-                        records block 30% of hours, and those are the hours the model handles worst (AUROC 0.63 vs 0.71).
+                        records block 30% of hours, where the model is weaker on average (AUROC 0.63 vs 0.71), at the cost
+                        of 16% of labelled-sepsis hours.
                         The top-ranked "driver", time in ICU, turned out to be an artifact of how labels are built.</p>
                     <a href="https://github.com/KeSeaman/Deep_Causality" class="project-link" target="_blank">
                         View on GitHub →
@@ -169,8 +171,9 @@
                         all put the earnings effect at about $800–890.</p>
                     <p class="project-lens"><strong>System lens:</strong> measured before claiming. For a single fit
                         Rust is 2–6× slower than numpy, which hands the work to optimised BLAS. For a bootstrap, which
-                        numpy cannot do in one call, a parallel Rust kernel is 3–20× faster than the best vectorised
-                        numpy version: the right tool depends on the shape of the workload.</p>
+                        numpy cannot do in one call, a parallel Rust kernel is up to 20× faster than the best vectorised
+                        numpy version (3–20× at ≤100k rows; 1.17× for DiD at 1M rows, from parallelism alone): the right
+                        tool depends on the shape of the workload.</p>
                     <a href="https://github.com/KeSeaman/Causal-Analytics" class="project-link" target="_blank">
                         View on GitHub →
                     </a>
