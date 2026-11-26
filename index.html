@@ -123,7 +123,7 @@
                         <a href="https://github.com/deepcausality-rs/deep_causality/issues/878" target="_blank">issue #878</a>).
                         A detector on those drivers reaches 0.70 hourly AUROC on the unseen hospital: above a SIRS/qSOFA
                         score (0.66), below using every feature (0.77).</p>
-                    <p class="project-lens"><strong>System lens:</strong> guardrails that refuse to predict on sparse
+                    <p class="project-lens">Guardrails that refuse to predict on sparse
                         records block 30% of hours, where the model is weaker on average (AUROC 0.63 vs 0.71), at the cost
                         of 16% of labelled-sepsis hours.
                         The top-ranked "driver", time in ICU, turned out to be an artifact of how labels are built.</p>
@@ -147,7 +147,7 @@
                         data. Trained in about 15 seconds on a laptop CPU, it matches the best plan found by exhaustive
                         search over one- and two-stop strategies (5363.4 s vs 5363.6 s) without being told how tyres
                         work.</p>
-                    <p class="project-lens"><strong>System lens:</strong> replaying the real race, the simulator
+                    <p class="project-lens">Replaying the real race, the simulator
                         flatters Hamilton by about 9 seconds, and that bias flows straight into the strategy the agent
                         learns. The README reports it rather than hiding it.</p>
                     <a href="https://github.com/KeSeaman/F1_MLOps" class="project-link" target="_blank">
@@ -169,7 +169,7 @@
                         Python bindings, set against EconML causal forests and mediation analysis on the NBER
                         job-training data. Difference in means, OLS, inverse probability weighting and causal forests
                         all put the earnings effect at about $800–890.</p>
-                    <p class="project-lens"><strong>System lens:</strong> measured before claiming. For a single fit
+                    <p class="project-lens">Measured before claiming. For a single fit
                         Rust is 2–6× slower than numpy, which hands the work to optimised BLAS. For a bootstrap, which
                         numpy cannot do in one call, a parallel Rust kernel is up to 20× faster than the best vectorised
                         numpy version (3–20× at ≤100k rows; 1.17× for DiD at 1M rows, from parallelism alone): the right
@@ -210,7 +210,7 @@
                         questions over arXiv climate research and World Bank project abstracts, linking scientific
                         evidence to what development projects fund. Plain vector search reaches about 0.9 recall@5 on
                         a hand-labelled 40-question set.</p>
-                    <p class="project-lens"><strong>System lens:</strong> an evaluator that shares the generator's
+                    <p class="project-lens">An evaluator that shares the generator's
                         blind spots measures nothing. Faithfulness needs an independent, stronger judge.</p>
                     <a href="https://github.com/KeSeaman/ClimatePolicyRAG" class="project-link" target="_blank">
                         View on GitHub →
@@ -231,7 +231,7 @@
                         spending and violent crime across 2,624 US cities, 2015–2019. The two-period DiD finds no
                         deterrent effect (+344 incidents per 100k in high-spending cities, p &lt; 0.10); the event study
                         suggests a long-run reduction, weakened by a pre-existing trend in 2014.</p>
-                    <p class="project-lens"><strong>System lens:</strong> spending responds to crime as well as
+                    <p class="project-lens">Spending responds to crime as well as
                         affecting it. With reverse causality, a high-spending city may simply be one where crime was
                         already rising.</p>
                     <a href="https://github.com/KeSeaman/Marginal_Utility_Police_Force" class="project-link"
@@ -270,7 +270,7 @@
                         <em>Practical Data Science with Amazon SageMaker</em>: train, tune (12 jobs) and deploy an XGBoost churn model for a
                         mobile operator, then set the decision threshold by the cost of missed churners against the cost
                         of incentives.</p>
-                    <p class="project-lens"><strong>System lens:</strong> the right threshold depends on what a wrong
+                    <p class="project-lens">The right threshold depends on what a wrong
                         prediction costs the business, not on accuracy.</p>
                     <a href="https://github.com/KeSeaman/Customer-Churn-Prediction-with-Sagemaker" class="project-link"
                         target="_blank">
@@ -291,7 +291,7 @@
                     <p class="project-description">Relative risk ratios on 2019 FBI arrest data measure which groups are
                         over-represented in arrests relative to population, by offence; clustering (K-Medoids, GMM,
                         hierarchical) then groups offences by demographic arrest profile.</p>
-                    <p class="project-lens"><strong>System lens:</strong> arrest data records policing as well as
+                    <p class="project-lens">Arrest data records policing as well as
                         offending, so a disparity in arrests is not by itself a disparity in crime.</p>
                     <a href="https://github.com/KeSeaman/Arrest_Demographics_Disparity" class="project-link"
                         target="_blank">
@@ -311,7 +311,7 @@
                     </div>
                     <p class="project-description">An interactive Power BI HR attrition dashboard: who leaves, from which
                         departments, roles and tenure bands, with KPI tracking for HR leadership.</p>
-                    <p class="project-lens"><strong>System lens:</strong> a dashboard shows who left, not why; the
+                    <p class="project-lens">A dashboard shows who left, not why; the
                         design question is which levers HR can actually change.</p>
                     <a href="https://github.com/KeSeaman/PowerBI_Visualization" class="project-link" target="_blank">
                         View on GitHub →
